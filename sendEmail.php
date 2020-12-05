@@ -50,9 +50,9 @@ if($_POST) {
       $mail = mail($siteOwnersEmail, $subject, $message, $headers);
 
 		if ($mail) { 
-			echo "OK";
-			header("Location: index.html");
-			exit(); 
+			echo "Thank You..";
+			
+			 
 			
 		}
       else { echo "Something went wrong. Please try again."; }
