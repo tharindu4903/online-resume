@@ -51,7 +51,8 @@ if($_POST) {
 
 		if ($mail) { 
 			echo "OK"; 
-			header("Location: https://tharindudhananjaya.ml/");
+			header("Location: https://tharindudhananjaya.ml");
+			exit;
 		}
       else { echo "Something went wrong. Please try again."; }
 		
