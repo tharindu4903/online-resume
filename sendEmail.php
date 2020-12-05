@@ -1,11 +1,10 @@
 ﻿<?php
+if(isset($_POST['submit'])) {
 
-if($_POST) {
-
-   $name = trim(stripslashes($_POST['contactName']));
-   $email = trim(stripslashes($_POST['contactEmail']));
-   $subject = trim(stripslashes($_POST['contactSubject']));
-   $contact_message = trim(stripslashes($_POST['contactMessage']));
+   $name = $_POST['contactName'];
+   $email = $_POST['contactEmail'];
+   $subject = $_POST['contactSubject'];
+   $contact_message = $_POST['contactMessage'];
 
    // Check Name
 	if (strlen($name) < 2) {
@@ -23,7 +22,7 @@ if($_POST) {
 	if ($subject == '') { $subject = "Contact Form Submission"; }
 
 	$to='tharindudhananjaya66@gmail.com'; // Receiver Email ID, Replace with your email ID
-	$headers="From: ".$name."\n"."Phone :".$email;
+	$headers="From: ".$name."\n"."email :".$email;
 
 	if(mail($to, $subject, $message, $headers)){
 		echo "<h1>Sent Successfully! Thank you"." ".$name.", We will contact you shortly!</h1>";
