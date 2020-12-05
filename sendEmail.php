@@ -50,7 +50,9 @@ if($_POST) {
       $mail = mail($siteOwnersEmail, $subject, $message, $headers);
 
 		if ($mail) { 
-			echo "OK"; 
+			echo "OK";
+			header("Location: index.html");
+			exit(); 
 			
 		}
       else { echo "Something went wrong. Please try again."; }
@@ -66,7 +68,7 @@ if($_POST) {
 		echo $response;
 
 	} # end if - there was a validation error
-	header("Location:https://tharindudhananjaya.ml/");
+	
 
 }
 
