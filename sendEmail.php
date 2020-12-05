@@ -48,10 +48,9 @@ if($_POST) {
 
       ini_set("sendmail_from", $siteOwnersEmail); // for windows server
       $mail = mail($siteOwnersEmail, $subject, $message, $headers);
-	  header("Location: https://tharindudhananjaya.ml");
+
 		if ($mail) { 
-			
-			header("Location: https://tharindudhananjaya.ml");
+			echo "OK"; 
 			exit;
 		}
       else { echo "Something went wrong. Please try again."; }
@@ -67,6 +66,7 @@ if($_POST) {
 		echo $response;
 
 	} # end if - there was a validation error
+	header("Location:https://tharindudhananjaya.ml/");
 
 }
 
