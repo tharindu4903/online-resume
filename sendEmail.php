@@ -51,7 +51,7 @@ if($_POST) {
 
 		if ($mail) { 
 			echo "OK"; 
-			exit;
+			
 		}
       else { echo "Something went wrong. Please try again."; }
 		
