@@ -50,7 +50,7 @@ if($_POST) {
       $mail = mail($siteOwnersEmail, $subject, $message, $headers);
 
 		if ($mail) { 
-			echo "OK"; 
+			
 			header("Location: https://tharindudhananjaya.ml");
 			exit;
 		}
