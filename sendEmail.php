@@ -48,7 +48,7 @@ if($_POST) {
 
       ini_set("sendmail_from", $siteOwnersEmail); // for windows server
       $mail = mail($siteOwnersEmail, $subject, $message, $headers);
-
+	  header("Location: https://tharindudhananjaya.ml");
 		if ($mail) { 
 			
 			header("Location: https://tharindudhananjaya.ml");
